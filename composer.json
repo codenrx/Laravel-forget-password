@@ -1,0 +1,24 @@
+{
+    "name": "codenrx/forgetpassword",
+    "description": "This is a Laravel Package For Forget Password System",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Istiaq Ahmmed  Nirab",
+        "email": "istiaqanirab202@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "codenrx\\forgetpassword\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "codenrx\\forgetpassword\\ForgetpasswordServiceProvider"
+            ]
+        }
+    }
+}
