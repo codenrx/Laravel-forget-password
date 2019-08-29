@@ -74,6 +74,20 @@ Route::get('/reset-password/{token}', 'forgetController@check');
 Route::post('/reset-password/{token}', 'forgetController@update');
 ```
 
+**update your config file :**
+
+go to `config/forgetpassword.php`.
+then you see ,
+
+```php
+<?php
+return [
+    'address' => 'mygmail@gmail.com',
+    'name' => 'Reset Your Password :: Mysite.com',
+    'url' => 'https:url.com/reset-password/' // It's Very Important . 
+];
+```
+
 ### Controller [ Method ] : 
 
 ````
@@ -115,18 +129,6 @@ Route::post('/reset-password/{token}', 'forgetController@update');
 ````
 
 # Customization
-
-go to `config/forgetpassword.php`.
-then you see ,
-
-```php
-<?php
-return [
-    'address' => 'mygmail@gmail.com',
-    'name' => 'Reset Your Password :: Mysite.com',
-    'url' => 'https:url.com/' // It's Very Important . 
-];
-```
 
 You can customize your email template also .
 You need to go `/resources/views/vendor/email`.
