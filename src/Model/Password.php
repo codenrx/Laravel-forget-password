@@ -22,7 +22,7 @@ class Password extends Model
             $token = Session::token();
             $password = Password::create(['email' => $email, 'token' => $token]);
             Mail::to($email)->send(new forgetPassword($token));
-            return "sucess";
+            return "success";
         }
     }
 
@@ -31,6 +31,8 @@ class Password extends Model
         $check = Password::where('token', $token)->first();
         if ($check == null) {
             return "failed";
+        } else {
+            return "success";
         }
     }
 
@@ -43,7 +45,7 @@ class Password extends Model
             $newPass = bcrypt($password);
             User::where('email', $check->email)->update(['password' => $newPass]);
             $check->delete();
-            return "sucess";
+            return "success";
         }
     }
 }
