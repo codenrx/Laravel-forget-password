@@ -67,7 +67,7 @@ Here `$password` will be user's new password
 ```php
 // Forget Password page
 Route::get('/forget-password', 'forgetController@index');
-Route::get('/forget-password', 'forgetController@send');
+Route::post('/forget-password', 'forgetController@send');
 
 // reset password page
 Route::get('/reset-password/{token}', 'forgetController@check');
